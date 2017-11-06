@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(devtools)\ninstall_github(\"genomicsclass/tissuesGeneExpression\")\nlibrary(tissuesGeneExpression)\ndata(tissuesGeneExpression)\nhead(e)\nhead(tissue)\n\n#q1\nlength(tissue[tissue == 'hippocampus'])\n\n#q2\nd <- dist(t(e),method = 'euclidean')\nas.matrix(d)[3,45]\n\n#q3\nx <- e['210486_at',]\ny <- e['200805_at',]\nsqrt(sum((x-y)^2))\n\n#q5\nd <- as.matrix(d)\n(length(d)-length(diag(d)))/2\n\n",
+    "created" : 1509958144639.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3023151395",
+    "id" : "AB924965",
+    "lastKnownWriteTime" : 1509960977,
+    "last_content_update" : 1509960977438,
+    "path" : "C:/Users/up16223/Desktop/High_Dimensional_Data_Analysis/Week1/DistanceExercise.R",
+    "project_path" : "DistanceExercise.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
