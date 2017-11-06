@@ -31,11 +31,14 @@ sqrt(crossprod(z[,3]-z[,45]))
 sqrt(crossprod(e[,3]-e[,45]))-sqrt(crossprod(z[1:2,3]-z[1:2,45]))
 
 #q5
-for (i in range(1:185)){
-dist <-  sqrt(crossprod(e[,3]-e[,45]))-sqrt(crossprod(z[1:i,3]-z[1:i,45]))
- if(dist < sqrt(crossprod(e[,3]-e[,45]))*0.1)
-    {
-      break;
- }
-}
+for (i in 2:185){
+  dist <-  sqrt(crossprod(e[,3]-e[,45]))-sqrt(crossprod(z[1:i,3]-z[1:i,45]))
+  if(dist < (sqrt(crossprod(e[,3]-e[,45]))*0.1)){
+      break; }
+  }
 print(i)
+
+#q6
+distances = sqrt(apply(e[,-3]-e[,3],2,crossprod))
+distances_new = sqrt(apply(z[1:2,-3]-z[1:2,3],2,crossprod))
+cor(distances,distances_new, method = 'spearman')
