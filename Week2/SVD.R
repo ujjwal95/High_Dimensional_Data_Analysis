@@ -47,7 +47,7 @@ max(abs(resid))
 #we can see by the below command that vairance explained becomes 0 soon enough
 plot(s$d^2/ sum(s$d^2)*100)
 
-#we can try to remove half of the data
+#we can try to remove half of the data dimensions
 
 k <- ncol(U)-95
 Yhat <- U[,1:k] %*% D[1:k,1:k] %*% t(V[,1:k])
